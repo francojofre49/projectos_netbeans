@@ -33,15 +33,15 @@ public class Subprogramaejercicio4 {
     }
 
     public static boolean EsPrimo(int num) {
-        boolean resp = true;
+        
+        int cont=0;
 
         for (int i = 1; i <= num; i++) {
-            if (0 != num % i) {
-                resp = false;
-                break;
+            if (num % i==0) {
+                cont++;
             }
-
-        }
-        return resp;
+                   }
+        return cont==2;
+        
     }
 }
