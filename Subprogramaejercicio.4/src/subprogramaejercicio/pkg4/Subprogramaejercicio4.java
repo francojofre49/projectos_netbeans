@@ -31,7 +31,7 @@ public class Subprogramaejercicio4 {
         }
 
     }
-
+   
     public static boolean EsPrimo(int num) {
 
         int cont = 0;
