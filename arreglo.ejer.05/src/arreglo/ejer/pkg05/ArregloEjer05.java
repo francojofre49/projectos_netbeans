@@ -20,40 +20,40 @@ public class ArregloEjer05 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         Scanner leer = new Scanner(System.in);
-        
-        int [ ][ ] matriz= new int[3][3];
-        int [ ][ ] matrizTrans= new int[3][3];   
-        
+
+        int[][] matriz = new int[3][3];
+        int[][] matrizTrans = new int[3][3];
+
         System.out.println("ingresar 9 numeros enteros");
-        
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-               matriz[i][j]= leer.nextInt();
+                matriz[i][j] = leer.nextInt();
             }
-         }
-mostrarMatriz(matriz);
-        
-         //hago la tranpuesta de la matriz
-            for (int j = 0; j < 3; j++) {
-                  for (int i = 0; i < 3; i++) {
-                matrizTrans[j][i]= matriz[i] [j];
+        }
+        mostrarMatriz(matriz);
+
+        //hago la tranpuesta de la matriz
+        for (int j = 0; j < 3; j++) {
+            for (int i = 0; i < 3; i++) {
+                matrizTrans[j][i] = matriz[i][j];
             }
-         }
-       mostrarMatriz(matrizTrans);
-        boolean resp=false;
+        }
+        mostrarMatriz(matrizTrans);
+        boolean resp = false;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if((matriz[i][j]+matrizTrans[i][j])>0){
-                    
-                    resp=true;
+                if ((matriz[i][j] + matrizTrans[i][j]) > 0) {
+
+                    resp = true;
                     break;
-               
+
                 }
             }
         }
-       
+
         if (!resp) {
 
             System.out.println("es una matriz antisimetrica");
