@@ -20,23 +20,23 @@ public class PooEjercicio1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     
-        pedirDatos();
+      Libro libro=new Libro();
+        pedirDatos(libro);
       
         
         
         System.out.println("El titulo del libro es:"+libro.getTitulo()+", su ISBN es "+libro.getISBN()+", su autor es "+libro.getAutor()+" y su cantidad de paginas es "+libro.getPaginas());
     }
     
-    public static void pedirDatos(){
+    public static void pedirDatos(Libro libro){
       Scanner leer = new Scanner(System.in);
         
-         Libro libro=new Libro();
+        
       System.out.println("Ingrese Titulo del libro");
-        libro.setTitulo(leer.nextLine());
+        libro.setTitulo(leer.next());
         System.out.println("Ingrese ISBN");
         libro.setISBN(leer.next());
-        System.out.println("Ingrese autor del libro "+libro.getTitulo());
+        System.out.println("Ingrese autor del libro  "+libro.getTitulo());
         libro.setAutor(leer.next());
         System.out.println("Ingrese cantidad de paginas");
         libro.setPaginas(leer.nextInt());
