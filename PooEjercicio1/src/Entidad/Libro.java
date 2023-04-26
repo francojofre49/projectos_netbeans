@@ -5,6 +5,8 @@
  */
 package Entidad;
 
+import java.util.Scanner;
+
 /**
  *
  * @author frank
@@ -19,6 +21,7 @@ public class Libro {
     public Libro() {
     }
 
+    
     public Libro(String ISBN, String titulo, String autor, int paginas) {
         this.ISBN = ISBN;
         this.titulo = titulo;
@@ -59,7 +62,31 @@ public class Libro {
     }
 
   
- 
+
+  
+  public  void pedirDatos(){
+      Scanner leer = new Scanner(System.in);
+        
+        
+      System.out.println("Ingrese Titulo del libro");
+        titulo=leer.next();
+        System.out.println("Ingrese ISBN");
+        ISBN=leer.next();
+        System.out.println("Ingrese autor del libro  "+titulo);
+        autor=leer.next();
+        System.out.println("Ingrese cantidad de paginas");
+       paginas=leer.nextInt();
+    
+    
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", paginas=" + paginas + '}';
+    }
+
+    
+    
     
     
     
