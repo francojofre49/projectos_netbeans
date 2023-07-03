@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia11Ejer3">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="entidad" visibility="public" xPosition="259.0" yPosition="21.0">
+      <Fields>
+        <Field name="baraja" type="List&lt;Carta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getBaraja" returnType="List&lt;Carta&gt;" visibility="public"/>
+        <Method name="setBaraja" returnType="void" visibility="public">
+          <Argument type="List&lt;Carta&gt;" name="baraja"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Carta" package="entidad" visibility="public" xPosition="559.0" yPosition="42.0">
+      <Fields>
+        <Field name="numero" type="Integer" visibility="private"/>
+        <Field name="palo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numero"/>
+          <Argument type="String" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia11Ejer3" package="guia11ejer3" visibility="public" xPosition="513.0" yPosition="294.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioBaraja" package="servicio" visibility="public" xPosition="89.0" yPosition="237.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="yasalio" type="List&lt;Carta&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cargarBaraja" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="barajar" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="cartasYaSalio" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="siguienteCarta" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+        <Method name="quedanEnMazo" returnType="void" visibility="public">
+          <Argument type="Baraja" name="barajas"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="yasalio" source="servicio.ServicioBaraja" target="entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Carta&gt;"/>
+    <UseRelation source="entidad.Baraja" target="entidad.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicio.ServicioBaraja" target="entidad.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="baraja" source="entidad.Baraja" target="entidad.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Carta&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
